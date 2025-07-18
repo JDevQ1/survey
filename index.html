@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+</head>
+<body>
+  <h1 id="title">Customer Feedback Survey</h1>
+  <p id="description">We value your input! Please fill out this form to help us improve our services.</p>
+  <form id="survey-form">
+    <label id="name-label" for="name">Name:</label>
+    <input id="name" type="text" placeholder="Enter your full name" required>
+    
+    <label id="email-label" for="email">Email:</label>
+    <input id="email" type="email" placeholder="Enter your email" required>
+    
+    <label id="number-label" for="number">Age (18-100):</label>
+    <input id="number" type="number" min="18" max="100" placeholder="Enter your age">
+    
+    <label for="dropdown">How did you hear about us?</label>
+    <select id="dropdown">
+      <option value="">-- Select an option --</option>
+      <option value="friend">Friend</option>
+      <option value="social-media">Social Media</option>
+      <option value="advertisement">Advertisement</option>
+      <option value="other">Other</option>
+    </select>
+    
+    <fieldset>
+      <legend>Would you recommend our services?</legend>
+      <label><input type="radio" name="recommend" value="yes" required> Yes</label>
+      <label><input type="radio" name="recommend" value="no"> No</label>
+    </fieldset>
+    
+    <fieldset>
+      <legend>Which services do you use? (Select all that apply)</legend>
+      <label><input type="checkbox" name="services" value="online"> Online Platform</label>
+      <label><input type="checkbox" name="services" value="mobile"> Mobile App</label>
+      <label><input type="checkbox" name="services" value="in-person"> In-Person Support</label>
+    </fieldset>
+    
+    <label for="comments">Additional Comments:</label>
+    <textarea id="comments" placeholder="Tell us more about your experience..."></textarea>
+    
+    <button id="submit" type="submit">Submit</button>
+  </form>
+</body>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+}
+
+h1#title {
+  text-align: center;
+  color: #2c3e50;
+}
+
+p#description {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+form#survey-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="number"] {
+  width: 150px;
+}
+
+select {
+  cursor: pointer;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 15px;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+button#submit {
+  width: 100%;
+  padding: 10px;
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button#submit:hover {
+  background-color: #34495e;
+}
+  </style>
+</html>
